@@ -1,0 +1,1102 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Солнечный Луч - Детский летний лагерь</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <style>
+        /* Основные стили */
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #81c784;
+            --accent-color: #ffb74d;
+            --dark-color: #1b5e20;
+            --light-color: #e8f5e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Шапка сайта */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Герой-секция */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: white;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #333;
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background-color: #ffa726;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            margin-left: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        /* О лагере */
+        .about {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 0.5rem auto 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .about-img:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        /* Программы */
+        .programs {
+            background-color: var(--light-color);
+            padding: 5rem 2rem;
+        }
+
+        .programs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .program-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .program-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .program-card:hover .program-img img {
+            transform: scale(1.1);
+        }
+
+        .program-content {
+            padding: 1.5rem;
+        }
+
+        .program-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .program-content p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .program-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Форма регистрации */
+        .registration {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .registration-container {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .registration-img {
+            background: url('https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80') no-repeat center center/cover;
+        }
+
+        .registration-form {
+            padding: 3rem;
+        }
+
+        .registration-form h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(129, 199, 132, 0.3);
+            outline: none;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--dark-color);
+        }
+
+        /* Подвал */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .footer-col p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            opacity: 1;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Чат-помощник */
+        .chat-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .chat-toggle {
+            background-color: var(--primary-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .chat-toggle:hover {
+            background-color: var(--dark-color);
+            transform: scale(1.1);
+        }
+
+        .chat-toggle i {
+            font-size: 1.5rem;
+        }
+
+        .chat-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(20px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .chat-window.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .chat-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header h3 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .close-chat {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .chat-body {
+            height: 300px;
+            overflow-y: auto;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message.bot {
+            align-items: flex-start;
+        }
+
+        .message.user {
+            align-items: flex-end;
+        }
+
+        .message-content {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            position: relative;
+        }
+
+        .message.bot .message-content {
+            background-color: white;
+            color: #333;
+            border-top-left-radius: 5px;
+        }
+
+        .message.user .message-content {
+            background-color: var(--secondary-color);
+            color: white;
+            border-top-right-radius: 5px;
+        }
+
+        .message-time {
+            font-size: 0.7rem;
+            color: #999;
+            margin-top: 3px;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            background-color: white;
+            border-top: 1px solid #eee;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+        }
+
+        .send-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .send-btn:hover {
+            background-color: var(--dark-color);
+        }
+
+        /* Адаптивность */
+    media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img {
+                order: -1;
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .registration-container {
+                grid-template-columns: 1fr;
+            }
+
+            .registration-img {
+                height: 200px;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+    media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                margin-top: 1.5rem;
+            }
+
+            nav ul li {
+                margin: 0 0.8rem;
+            }
+
+            .hero-content h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    media (max-width: 576px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .chat-window {
+                width: 300px;
+            }
+        }
+    </style> -->
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-campground"></i>
+                <div class="logo-text">
+                    <h1>Солнечный Луч</h1>
+                    <p>Летний лагерь для детей 6-16 лет</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О лагере</a></li>
+                    <li><a href="#programs">Программы</a></li>
+                    <li><a href="#registration">Регистрация</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Незабываемое лето для вашего ребенка</h2>
+            <p>Приключения, друзья, новые навыки и масса впечатлений в нашем летнем лагере на берегу живописного озера.</p>
+            <a href="#registration" class="btn">Зарегистрироваться</a>
+            <a href="#programs" class="btn btn-secondary">Наши программы</a>
+        </div>
+    </section>
+
+    <!-- О лагере -->
+    <section class="about" id="about">
+        <div class="section-title">
+            <h2>Наш лагерь</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Почему родители выбирают "Солнечный Луч"?</h3>
+                <p>Наш лагерь предлагает безопасную и комфортную среду для развития детей, где они смогут раскрыть свои таланты, обрести новых друзей и научиться важным жизненным навыкам.</p>
+                <p>Расположенный в экологически чистом районе на берегу озера, лагерь окружен сосновым лесом и имеет собственную оборудованную территорию для занятий спортом, творчеством и активным отдыхом.</p>
+
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Безопасность</h4>
+                        <p>Круглосуточная охрана, медицинский пункт и опытные вожатые</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-utensils"></i>
+                        <h4>Питание</h4>
+                        <p>5-разовое сбалансированное питание по рекомендациям диетологов</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-child"></i>
+                        <h4>Развитие</h4>
+                        <p>Разнообразные образовательные и развлекательные программы</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-img">
+                <img src="https://www.cism-ms.ru/upload/iblock/e26/598tqq5hg5ft4jl5vu0mbvw8wocm075i.jpg" alt="Дети в лагере">
+            </div>
+        </div>
+    </section>
+
+    <!-- Программы -->
+    <section class="programs" id="programs">
+        <div class="programs-container">
+            <div class="section-title">
+                <h2>Наши программы</h2>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Спортивная программа">
+                    </div>
+                    <div class="program-content">
+                        <h3>Спортивная смена</h3>
+                        <p>Футбол, волейбол, плавание, скалолазание и другие виды спорта под руководством профессиональных тренеров.</p>
+                        <div class="program-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 14-27 июня</span>
+                            <span><i class="fas fa-users"></i> 8-12 лет</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Творческая программа">
+                    </div>
+                    <div class="program-content">
+                        <h3>Творческая смена</h3>
+                        <p>Театр, музыка, рисование, танцы и другие виды искусства. Развитие креативности и самовыражения.</p>
+                        <div class="program-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 1-14 июля</span>
+                            <span><i class="fas fa-users"></i> 6-14 лет</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="https://static.vl.ru/afisha/1725938838536_big" alt="Научная программа">
+                    </div>
+                    <div class="program-content">
+                        <h3>Научная смена</h3>
+                        <p>Эксперименты, программирование, робототехника и познавательные экскурсии. Для юных исследователей!</p>
+                        <div class="program-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 15-28 июля</span>
+                            <span><i class="fas fa-users"></i> 10-16 лет</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма регистрации -->
+    <section class="registration" id="registration">
+        <div class="section-title">
+            <h2>Регистрация в лагерь</h2>
+        </div>
+        <div class="registration-container">
+            <div class="registration-img"></div>
+            <div class="registration-form">
+                <h3>Заявка на участие</h3>
+                <form id="campRegistrationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="childName">Имя ребенка</label>
+                            <input type="text" id="childName" name="childName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="childAge">Возраст ребенка</label>
+                            <input type="number" id="childAge" name="childAge" min="6" max="16" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="parentName">Имя родителя</label>
+                            <input type="text" id="parentName" name="parentName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="parentPhone">Телефон родителя</label>
+                            <input type="tel" id="parentPhone" name="parentPhone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="program">Выберите программу</label>
+                        <select id="program" name="program" required>
+                            <option value="">-- Выберите программу --</option>
+                            <option value="Спортивная смена">Спортивная смена (14-27 июня)</option>
+                            <option value="Творческая смена">Творческая смена (1-14 июля)</option>
+                            <option value="Научная смена">Научная смена (15-28 июля)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Дополнительная информация</label>
+                        <textarea id="comments" name="comments" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer id="contacts">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Солнечный Луч</h3>
+                <p>Летний лагерь для детей 6-16 лет. Создаем незабываемые каникулы с 2005 года.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Московская обл., Пушкинский р-н</p>
+                <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                <p><i class="fas fa-envelope"></i> info@sunnylight-camp.ru</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О лагере</a></li>
+                    <li><a href="#programs">Программы</a></li>
+                    <li><a href="#registration">Регистрация</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Документы</h3>
+                <ul>
+                    <li><a href="#">Лицензии</a></li>
+                    <li><a href="#">Договор</a></li>
+                    <li><a href="#">Правила лагеря</a></li>
+                    <li><a href="#">Список вещей</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Летний лагерь "Солнечный Луч". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Чат-помощник -->
+    <div class="chat-container">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h3>Помощник лагеря</h3>
+                <button class="close-chat" id="closeChat"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="message bot">
+                    <div class="message-content">
+                        Здравствуйте! Я ваш помощник из лагеря "Солнечный Луч". Чем могу помочь?
+                    </div>
+                    <div class="message-time">сегодня, 12:00</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Напишите ваш вопрос...">
+                <button class="send-btn" id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <div class="chat-toggle" id="chatToggle">
+            <i class="fas fa-comments"></i>
+        </div>
+    </div>
+
+    <!-- <script>
+        // Открытие/закрытие чата
+        const chatToggle = document.getElementById('chatToggle');
+        const chatWindow = document.getElementById('chatWindow');
+        const closeChat = document.getElementById('closeChat');
+
+        chatToggle.addEventListener('click', () => {
+            chatWindow.classList.toggle('active');
+        });
+
+        closeChat.addEventListener('click', () => {
+            chatWindow.classList.remove('active');
+        });
+
+        // Общение в чате
+        const messageInput = document.getElementById('messageInput');
+        const sendMessage = document.getElementById('sendMessage');
+        const chatBody = document.getElementById('chatBody');
+
+        sendMessage.addEventListener('click', sendUserMessage);
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendUserMessage();
+            }
+        });
+
+        function sendUserMessage() {
+            const message = messageInput.value.trim();
+            if (message === '') return;
+
+            // Добавляем сообщение пользователя
+            addMessageToChat(message, 'user');
+            messageInput.value = '';
+
+            // Имитируем ответ бота (в реальном ASP.NET приложении здесь будет запрос к серверу)
+            setTimeout(() => {
+                const botResponse = getBotResponse(message);
+                addMessageToChat(botResponse, 'bot');
+            }, 1000);
+        }
+
+        function addMessageToChat(message, sender) {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('ru-RU', {hour: '2-digit', minute:'2-digit'});
+
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            messageDiv.innerHTML = `
+                <div class="message-content">${message}</div>
+                <div class="message-time">${timeString}</div>
+            `;
+
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function getBotResponse(userMessage) {
+            const lowerMessage = userMessage.toLowerCase();
+
+            if (lowerMessage.includes('привет') || lowerMessage.includes('здравств')) {
+                return 'Здравствуйте! Я могу ответить на ваши вопросы о лагере "Солнечный Луч".';
+            } else if (lowerMessage.includes('программ') || lowerMessage.includes('смен')) {
+                return 'У нас есть три смены: Спортивная (14-27 июня), Творческая (1-14 июля) и Научная (15-28 июля). Подробнее на странице "Программы".';
+            } else if (lowerMessage.includes('регистрация') || lowerMessage.includes('запись')) {
+                return 'Для регистрации заполните форму на странице "Регистрация". Наш менеджер свяжется с вами для подтверждения.';
+            } else if (lowerMessage.includes('стоимость') || lowerMessage.includes('цена') || lowerMessage.includes('сколько стоит')) {
+                return 'Стоимость одной смены 35,000 рублей. Есть скидки для братьев/сестер и при ранней регистрации.';
+            } else if (lowerMessage.includes('контакт') || lowerMessage.includes('телефон') || lowerMessage.includes('адрес')) {
+                return 'Наш телефон: +7 (495) 123-45-67, email: info@sunnylight-camp.ru. Лагерь расположен в Московской области, Пушкинский район.';
+            } else if (lowerMessage.includes('питание')) {
+                return '5-разовое сбалансированное питание по рекомендациям диетологов. Учитываем индивидуальные особенности (аллергии, диеты).';
+            } else if (lowerMessage.includes('вещи') || lowerMessage.includes('брать') || lowerMessage.includes('список')) {
+                return 'Рекомендуем взять удобную одежду и обувь, купальные принадлежности, средства гигиены. Полный список вышлем после регистрации.';
+            } else if (lowerMessage.includes('безопасность') || lowerMessage.includes('охрана') || lowerMessage.includes('медик')) {
+                return 'Территория круглосуточно охраняется, есть медицинский пункт с дежурным врачом. Вожатые проходят специальную подготовку.';
+            } else {
+                return 'Извините, я не совсем понял ваш вопрос. Вы можете позвонить нам по телефону +7 (495) 123-45-67 для уточнения информации.';
+            }
+        }
+
+        // Обработка формы регистрации
+        const registrationForm = document.getElementById('campRegistrationForm');
+
+        registrationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Здесь должна быть логика отправки данных на сервер (ASP.NET)
+            // Для демонстрации просто покажем сообщение
+            alert('Спасибо за заявку! Наш менеджер свяжется с вами в ближайшее время.');
+
+            // Очистка формы
+            registrationForm.reset();
+
+            // Отправка сообщения в чат
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('ru-RU', {hour: '2-digit', minute:'2-digit'});
+
+            addMessageToChat('Спасибо за регистрацию в нашем лагере! Скоро мы с вами свяжемся.', 'bot');
+            chatWindow.classList.add('active');
+        });
+
+        // Плавная прокрутка для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script> -->
+</body>
+</html>
