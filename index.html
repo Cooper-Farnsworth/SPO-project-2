@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html Lang = "ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Солнечный Луч - Детский летний лагерь</title>
+</head>
+<body class="page__body">
+    <header class="main-header">
+        <p class="main-header__text">
+            Солнечный Луч <br>
+            Летний лагерь для детей 6-16 лет
+        </p>
+        <nav class="main-nav">
+            <ul class="main-nav__list site-list">
+                <li class="site-list__item">
+                    <a href="#home">Главная</a>
+                </li>
+                <li class="site-list__item">
+                    <a href="#about">О Лагере</a>
+                </li>
+                <li class="site-list__item">
+                    <a href="#programs">Программы</a>
+                </li>
+                <li class="site-list__item">
+                    <a href="#registration">Регистрация</a>
+                </li>
+                <li class="site-list__item">
+                    <a href="#contacts">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero__container">
+            <h1 class="hero__title">Незабываемое лето для вашего ребенка</h2>
+            <p class="hero__text">Приключения, друзья, новые навыки и масса впечатлений в нашем летнем лагере на берегу живописного озера.</p>
+            <a href="#registration" class="hero__btn btn">Зарегистрироваться</a>
+            <a href="#programs" class="hero__btn btn btn--secondary">наши программы</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about__container">
+            <h2 class="about__title">Почему родители выбирают "Солнечный Луч"?</h2>
+            <p class="about__text">Наш лагерь предлагает безопасную и комфортную среду для развития детей, где они смогут раскрыть свои таланты, обрести новых друзей и научиться важным жизненным навыкам.</p>
+            <p class="about__text">Расположенный в экологически чистом районе на берегу озера, лагерь окружен сосновым лесом и имеет собственную оборудованную территорию для занятий спортом, творчеством и активным отдыхом.</p>
+            <ul class="about__list">
+                <li class="about__item">
+                    <h3 class="item__title">Безопасность</h3>
+                    <p class="item__text">Круглосуточная охрана, медицинский пункт и вожатые профессионалы</p>
+                </li>
+                <li class="about__item">
+                    <h3 class="item__title">Питание</h3>
+                    <p class="item__text">5-разовое сбалансированное питание по рекомендациям диетологов</p>
+                </li>
+                <li class="about__item">
+                    <h3 class="item__title">Образование</h3>
+                    <p class="item__text">Разнообразные образовательные и развлекательные программы</p>
+                </li>
+            </ul>
+            <img src="" alt="" class="about__image">
+        </div>
+    </section>
+
+    <section class="programs" id="programs">
+        <div class="programs__container">
+            <h2 class="programs__title">Наши программы</h2>
+            <article class="programs__card card programs__card--sports">
+                <img src="" alt="" class="card__image">
+                <h3 class="card__title">Спортивная смена</h3>
+                <p class="card__text">Футбол, волейбол, плавание, скалолазание и другие виды спорта под руководством профессиональных тренеров.</p>
+                <p class="card__meta">
+                    <span>14-27 июня</span>
+                    <span>8-12 лет</span>
+                </p>
+            </article>
+
+            <article class="programs__card card programs__card--arts">
+                <img src="" alt="" class="card__image">
+                <h3 class="card__title">Творческая смена</h3>
+                <p class="card__text">Театр, музыка, рисование, танцы и другие виды искусства. Развитие креативности и самовыражения.</p>
+                <p class="card__meta">
+                    <span>1-14 Июля</span>
+                    <span>6-14 лет</span>
+                </p>
+            </article>
+
+            <article class="programs__card card programs__card--science">
+                <img src="" alt="" class="card__image">
+                <h3 class="card__title">Научная смена</h3>
+                <p class="card__text">Эксперименты, программирование, робототехника и познавательные экскурсии. Для юных исследователей!</p>
+                <p class="card__meta">
+                    <span> 15-28 Июля</span>
+                    <span>10 - 16 лет</span>
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="registration" id = "registration">
+        <div class="registration__container">
+            <h2 class="registration__title">Регистрация в лагерь</h2>
+            <img src="" alt="" class="registration__image">
+            <form action="" class="registration__form" id="campRegistrationForm">
+                <h3>Заявка на участие</h3>
+                <div class="form__row">
+                    <div class="form__group">
+                        <label for="childName">Имя ребенка</label>
+                        <input type="text" id="childName" name="childName" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="childAge">Возраст ребенка</label>
+                        <input type="number" id="childAge" name="childAge" min="6" max="16" required>
+                    </div>
+                </div>
+                
+                <div class="form__row">
+                    <div class="form__group">
+                        <label for="parentName">Имя родителя</label>
+                        <input type="text" id="parentName" name="parentName" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="parentPhone">Телефон родителя</label>
+                        <input type="tel" id="parentPhone" name="parentPhone" required>
+                    </div>
+                </div>
+                
+                <div class="form__group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form__group">
+                    <label for="program">Выберите программу</label>
+                    <select id="program" name="program" required>
+                        <option value="">-- Выберите программу --</option>
+                        <option value="Спортивная смена">Спортивная смена (14-27 июня)</option>
+                        <option value="Творческая смена">Творческая смена (1-14 июля)</option>
+                        <option value="Научная смена">Научная смена (15-28 июля)</option>
+                    </select>
+                </div>
+                
+                <div class="form__group">
+                    <label for="comments">Дополнительная информация</label>
+                    <textarea id="comments" name="comments" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="form button submit-button">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer" id="contacts">
+        <div class="main-footer__container">
+            <ul class="main-footer__topics">
+                <li class="main-footer__topic">
+                    <h2 class="topic__title">Солнечный Луч</h2>
+                    <p class="topic__text">Летний лагерь для детей 6-16 лет. Создаем незабываемые каникулы с 2005 года.</p>
+                    <ul class="topic__list social-list">
+                        <li class="social-list__item"><a href=""></a></li>
+                        <li class="social-list__item"><a href=""></a></li>
+                        <li class="social-list__item"><a href=""></a></li>
+                        <li class="social-list__item"><a href=""></a></li>
+                    </ul>
+                </li>
+
+                <li class="main-footer__topic">
+                    <h2 class="topic__title">Контакты</h2>
+                    <ul class="topic__list">
+                        <li class="topic__item">
+                            <p class="topic__text"> Московская обл., Пушкинский р-н</p>
+                        </li>
+                        <li class="topic__item">
+                            <p class="topic__text"> +7 (495) 123-45-67</p>
+                        </li>
+                        <li class="topic__item">
+                            <p class="topic__text"> info@sunnylight-camp.ru</p>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="main-footer__topic">
+                    <h2 class="topic__title">Быстрые ссылки</h2>
+                    <ul class="topic__list">
+                        <li class="topic__item">
+                            <a href="#home" class="topic__link">Главная</a>
+                        </li>
+                        <li class="topic__item">
+                            <a href="#about" class="topic__link">о Лагере</a>
+                        </li>
+                        <li class="topic__item">
+                            <a href="#programs" class="topic__link">Программы</a>
+                        </li>
+                        <li class="topic__item">
+                            <a href="#registration" class="topic__link">Регистрация</a>
+                        </li>
+                        <li class="topic__item">
+                            <a href="#" class="topic__link">Отзывы</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="main-footer__topic">
+                    <h2 class="topic__title">Документы</h2>
+                    <ul class="topic__list">
+                        <li class="topic__item">
+                            <a href="" class="topic__link">Лицензии</a>
+                        </li>
+                        <li class="topic__item">
+                            <a href="" class="topic__link">Договор</a>
+                        </li>
+                        <li class="topic__item">
+                            <a href="" class="topic__link">Правила Лагеря</a>
+                        </li>
+                        <li class="topic__item">
+                            <a href="" class="topic__link">Список вещей</a>
+                        </li>
+                        <li class="topic__item">
+                            <a href="" class="topic__link">FAQ</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 Летний лагерь "Солнечный Луч". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chat-container">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h3>Помощник лагеря</h3>
+                <button class="close-chat" id="closeChat"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="message bot">
+                    <div class="message-content">
+                        Здравствуйте! Я ваш помощник из лагеря "Солнечный Луч". Чем могу помочь?
+                    </div>
+                    <div class="message-time">сегодня, 12:00</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Напишите ваш вопрос...">
+                <button class="send-btn" id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <div class="chat-toggle" id="chatToggle">
+            <i class="fas fa-comments"></i>
+        </div>
+    </div>
+</body>
+</html>
