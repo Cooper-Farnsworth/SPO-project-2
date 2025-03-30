@@ -235,3 +235,64 @@ header {
     margin-bottom: 0.5rem;
     color: var(--dark-color);
 }
+
+.programs {
+    background-color: var(--light-color);
+    padding: 5rem 2rem;
+}
+
+.programs__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.programs__card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.programs__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card__image {
+    height: 200px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.programs__card:hover .card__image {
+    transform: scale(1.1);
+}
+
+.card__title, .card__text, .card__meta {
+    padding: 1.5rem;
+}
+
+.card__title {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.card__text {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.card__meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    color: #777;
+    font-size: 0.9rem;
+}
