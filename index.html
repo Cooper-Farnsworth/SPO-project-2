@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<link rel="stylesheet" href="/style.css">
+	<script src="/script.js"></script>
 	<title>Сайт детского лагеря - Солнечный луч</title>
 </head>
 
@@ -131,13 +132,13 @@
 	</section>
 
 	<section class="registration" id="registration">
-		<div class="section-title">
+		<div class="section__title">
 			<h2>Регистрация в лагерь</h2>
 		</div>
 		<div class="registration__container">
 			<div class="registration__image"></div>
 
-			<div class="registration-form">
+			<div class="registration__form">
 				<form id="campRegistrationForm">
 					<div class="form__row">
 						<div class="form__group">
@@ -207,7 +208,7 @@
 				<p><i class="fas fa-envelope"></i> info@sunnylight-camp.ru</p>
 			</div>
 
-			<div class="footer_column">
+			<div class="footer__column">
 				<h3>Быстрые ссылки</h3>
 				<ul class="page-navigation-links">
 					<li class="page-navigation-links__item"><a href="#home">Главная</a></li>
@@ -228,10 +229,9 @@
 					<li class="documents-links__item"><a href="#">FAQ</a></li>
 				</ul>
 			</div>
-
-			<div class="footer__bottom">
-				<p>&copy; 2023 Летний лагерь "Солнечный Луч". Все права защищены.</p>
-			</div>
+		</div>
+		<div class="footer__bottom">
+			<p>&copy; 2023 Летний лагерь "Солнечный Луч". Все права защищены.</p>
 		</div>
 	</footer>
 
@@ -239,7 +239,7 @@
 		<div class="chat__window" id="chatWindow">
 			<div class="chat__header">
 				<h3>Помощник лагеря</h3>
-				<button class="close-chat" id="closeChat"><i class="fas fa-times"></i></button>
+				<button class="close__chat" id="closeChat"><i class="fas fa-times"></i></button>
 			</div>
 			<div class="chat__body" id="chatBody">
 				<div class="message bot">
@@ -251,7 +251,7 @@
 			</div>
 			<div class="chat__input">
 				<input type="text" id="messageInput" placeholder="Напишите ваш вопрос...">
-				<button class="send-btn" id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+				<button class="send__btn" id="sendMessage"><i class="fas fa-paper-plane"></i></button>
 			</div>
 		</div>
 		<div class="chat__toggle" id="chatToggle">
