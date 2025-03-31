@@ -351,7 +351,7 @@ header {
 }
 
 .registration__image {
-	background: url('https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80') no-repeat center center/cover;
+	background: url('/images/OurCampPhoto.jpg') no-repeat center center/cover;
 }
 
 .registration__form {
@@ -650,4 +650,72 @@ footer {
 
 .send__btn:hover {
     background-color: var(--dark-color);
+}
+
+
+@media (max-width: 992px) {
+    .about__container {
+        grid-template-columns: 1fr;
+    }
+
+    .about__image {
+        order: -1;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .registration__container {
+        grid-template-columns: 1fr;
+    }
+
+    .registration__image {
+        height: 200px;
+    }
+
+    .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1.5rem;
+    }
+
+    nav ul li {
+        margin: 0 0.8rem;
+    }
+
+    .hero__container h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero__container p {
+        font-size: 1rem;
+    }
+
+    .form__row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+    }
+
+    .chat__window {
+        width: 300px;
+    }
 }
